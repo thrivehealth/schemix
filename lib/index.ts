@@ -1,10 +1,10 @@
-import { PrismaSchema } from "modules/PrismaSchema";
+import { PrismaSchema } from "modules/PrismaSchema.js";
 
-import { PrismaDataSourceOptions } from "typings/prisma-datasource";
+import { PrismaDataSourceOptions } from "typings/prisma-datasource.js";
 import {
   PrismaGeneratorOptions,
   PrismaMultiGeneratorOptions,
-} from "typings/prisma-generator";
+} from "typings/prisma-generator.js";
 
 type PrivateSchema = Omit<
   PrismaSchema,
@@ -22,10 +22,13 @@ export let schema: PrismaSchema | undefined;
 
 /**
  * Create a Prisma schema object.
+ *
  * @param props.datasource The datasource object information for Prisma.
  * @param props.generator The generator object information for Prisma.
- * @param props.basePath The base path for the schema object, optional if you want a purely programmatically generated schema.
- * @param props.additionalPaths The path for a secondary location for the schema objects. Will not be searched if basePath is empty.
+ * @param props.basePath The base path for the schema object, optional if you
+ *   want a purely programmatically generated schema.
+ * @param props.additionalPaths The path for a secondary location for the schema
+ *   objects. Will not be searched if basePath is empty.
  * @returns The generated schema object.
  */
 export const createSchema = <T extends CreateSchemaOptions>({
@@ -47,8 +50,8 @@ export const createSchema = <T extends CreateSchemaOptions>({
   return schema;
 };
 
-export { createMixin, createEnum, createModel } from "util/create";
-export { extendModel } from "util/extend";
-export { PrismaModel } from "modules/PrismaModel";
-export { PrismaEnum } from "modules/PrismaEnum";
+export { createMixin, createEnum, createModel } from "util/create.js";
+export { extendModel } from "util/extend.js";
+export { PrismaModel } from "modules/PrismaModel.js";
+export { PrismaEnum } from "modules/PrismaEnum.js";
 export { PrismaSchema };

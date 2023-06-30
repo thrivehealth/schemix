@@ -1,6 +1,6 @@
-import { PrismaEnumOptions } from "typings/prisma-enum";
-import { ModelMapOptions } from "typings/prisma-type-options";
-import { buildModelMap } from "util/options";
+import { PrismaEnumOptions } from "typings/prisma-enum.js";
+import { ModelMapOptions } from "typings/prisma-type-options.js";
+import { buildModelMap } from "util/options.js";
 
 export class PrismaEnum {
   private enumMap: Map<string, string | undefined> = new Map();

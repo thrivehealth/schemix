@@ -1,7 +1,7 @@
-import { schema } from "../";
-import { PrismaEnum } from "modules/PrismaEnum";
-import { PrismaModel } from "modules/PrismaModel";
-import { getCallerFileName } from "util/stack";
+import { schema } from "../index.js";
+import { PrismaEnum } from "modules/PrismaEnum.js";
+import { PrismaModel } from "modules/PrismaModel.js";
+import { getCallerFileName } from "util/stack.js";
 
 export function createModel(
   name: string,

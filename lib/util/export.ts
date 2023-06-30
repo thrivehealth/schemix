@@ -1,12 +1,14 @@
 import path from "path";
 import fs from "fs";
 
-import { PrismaSchema } from "modules/PrismaSchema";
+import { PrismaSchema } from "modules/PrismaSchema.js";
 
 /**
  * Exports the schema to a path relative to the current working directory.
+ *
  * @param filepath The filepath of the target file.
- * @param filename The filename of the target file (should not include `.prisma` extension).
+ * @param filename The filename of the target file (should not include `.prisma`
+ *   extension).
  * @param schema The `PrismaSchema` object.
  */
 export const exportSchema = async (

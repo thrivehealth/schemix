@@ -1,6 +1,6 @@
-import { PrismaEnumField } from "modules/PrismaEnumField";
-import { PrismaScalarField } from "modules/PrismaScalarField";
-import { PrismaRelationalField } from "modules/PrismaRelationalField";
+import { PrismaEnumField } from "modules/PrismaEnumField.js";
+import { PrismaScalarField } from "modules/PrismaScalarField.js";
+import { PrismaRelationalField } from "modules/PrismaRelationalField.js";
 
 import {
   CompositeIDFieldOptions,
@@ -10,10 +10,11 @@ import {
   FieldOptions,
   ModelMapOptions,
   RelationalFieldOptions,
-} from "typings/prisma-type-options";
+} from "typings/prisma-type-options.js";
 
 /**
  * Manipulates the `PrismaScalarField` based on the options provided.
+ *
  * @param field THe prisma scalar field object.
  * @param options The options object.
  */
@@ -42,6 +43,7 @@ export const handleScalarOptions = <T extends FieldOptions>(
 
 /**
  * Manipulates the `PrismaRelationField` based on the options provided.
+ *
  * @param field The prisma relational field object.
  * @param options The options object.
  */
@@ -68,6 +70,7 @@ export const handleRelationalOptions = <T extends RelationalFieldOptions>(
 
 /**
  * Manipulates the `PrismaEnumField` based on the options provided.
+ *
  * @param field The prisma enum field object.
  * @param options The options object.
  */

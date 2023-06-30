@@ -2,8 +2,8 @@ import {
   PrismaFieldAttribute,
   PrismaFieldModifier,
   PrismaFieldTypeName,
-} from "typings/prisma-field";
-import { Comment } from "typings/prisma-type-options";
+} from "typings/prisma-field.js";
+import { Comment } from "typings/prisma-type-options.js";
 
 export class PrismaEnumField {
   private attributes: Map<string, PrismaFieldAttribute> = new Map();

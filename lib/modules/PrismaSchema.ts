@@ -1,15 +1,15 @@
-import { PrismaModel } from "modules/PrismaModel";
-import { PrismaEnum } from "modules/PrismaEnum";
+import { PrismaModel } from "modules/PrismaModel.js";
+import { PrismaEnum } from "modules/PrismaEnum.js";
 
-import { exportSchema } from "util/export";
-import { parseKeyValueBlock } from "util/blocks";
+import { exportSchema } from "util/export.js";
+import { parseKeyValueBlock } from "util/blocks.js";
 
-import { PrismaDataSourceOptions } from "typings/prisma-datasource";
+import { PrismaDataSourceOptions } from "typings/prisma-datasource.js";
 import {
   PrismaGeneratorOptions,
   PrismaMultiGeneratorOptions,
-} from "typings/prisma-generator";
-import { importAllFiles } from "util/import";
+} from "typings/prisma-generator.js";
+import { importAllFiles } from "util/import.js";
 
 export class PrismaSchema {
   private enums: Map<string, PrismaEnum> = new Map();
@@ -40,8 +40,9 @@ export class PrismaSchema {
   ) {}
 
   /**
-   * Parses a datasource block for the schema using the parameters
-   * provided in the constructor.
+   * Parses a datasource block for the schema using the parameters provided in
+   * the constructor.
+   *
    * @returns A string representing the datasource block.
    */
   private parseDataSource() {
@@ -53,8 +54,9 @@ export class PrismaSchema {
   }
 
   /**
-   * Parses a generator block for the schema using the parameters
-   * provided in the constructor.
+   * Parses a generator block for the schema using the parameters provided in
+   * the constructor.
+   *
    * @returns A string representing the generator block.
    */
   private parseGenerator() {
@@ -75,6 +77,7 @@ export class PrismaSchema {
 
   /**
    * Creates a mixin and automatically attaches it to the schema.
+   *
    * @returns The `PrismaModel` object.
    */
   public createMixin() {
@@ -84,6 +87,7 @@ export class PrismaSchema {
 
   /**
    * Creates a `PrismaModel` object and automatically attaches it to the schema.
+   *
    * @param modelName The name of the model.
    * @returns The `PrismaModel` object.
    */
@@ -95,6 +99,7 @@ export class PrismaSchema {
 
   /**
    * Creates a `PrismaEnum` object and automatically attaches it to the schema.
+   *
    * @param enumName The name of the enum.
    * @returns The `PrismaEnum` object.
    */
@@ -106,6 +111,7 @@ export class PrismaSchema {
 
   /**
    * Parses the schema into a singular schema string.
+   *
    * @returns Returns a singular schema string.
    */
   public toString(): Promise<string> {
@@ -146,6 +152,7 @@ export class PrismaSchema {
 
   /**
    * Exports the schema to the provided filepath/filename.
+   *
    * @param filepath The target filepath.
    * @param filename The target filename.
    */

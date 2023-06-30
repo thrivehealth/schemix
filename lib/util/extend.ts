@@ -1,6 +1,6 @@
-import { schema } from "../";
-import { getCallerFileName } from "util/stack";
-import type { PrismaModel } from "modules/PrismaModel";
+import { schema } from "../index.js";
+import { getCallerFileName } from "util/stack.js";
+import type { PrismaModel } from "modules/PrismaModel.js";
 
 export function extendModel(
   model: PrismaModel,
